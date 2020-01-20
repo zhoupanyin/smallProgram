@@ -1,0 +1,38 @@
+<!--pages/home/home.wxml-->
+<view>
+  <view class="page-section">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" auto-focus placeholder="请输入"/>
+        <button type="primary" size="mini" bindtap="primary" class="pry"> 搜索 </button>
+      </view>
+    </view>
+  </view>
+  <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+        <block wx:for="{{list}}" wx:key="key">
+          <swiper-item>
+            <image src="{{item}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+  </view>
+  <view class="btn-area">
+    <navigator url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover">页面1</navigator>
+    <navigator url="/page/navigat/navigat?title=navigat" hover-class="navigator-hover">页面2</navigator>
+    <navigator url="/page/naviga/naviga?title=naviga" hover-class="navigator-hover">页面3</navigator>
+    <navigator url="/page/navig/navig?title=navig" hover-class="navigator-hover">页面4</navigator>
+  </view>
+  <view class="btn-area1">
+    <navigator url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover">页面5</navigator>
+    <navigator url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover">页面6</navigator>
+    <navigator url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover">页面7</navigator>
+    <navigator url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover">页面8</navigator>
+  </view>
+  <view class="btn-area2">
+    <navigator url="/page/navigate/navigate?title=navigate" class="nav">页面5</navigator>
+    <navigator url="/page/navigate/navigate?title=navigate" class="nav">页面6</navigator>
+  </view>
+  <view class="vew">Demo</view>
+</view>
